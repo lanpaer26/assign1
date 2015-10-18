@@ -22,6 +22,7 @@ void setup () {
   x=floor(random(0,640));
   y=floor(random(0,480));
   a=floor(random(0,200));
+  h=0;
 }
 
 void draw() {
@@ -36,16 +37,15 @@ void draw() {
   image(enemy,z,100);
   z=z+2;
   z= z% 640;
-  h=h+1;
-  w=h-640;
-  h=h%640;
-   if(h>=641){
+  h++;
+  if(h>=641){
     h -= 1282;
   }
   if(h>=641 || h<0)
     w++;
   else{
     w = h-641;
+  }
   
   
 }
